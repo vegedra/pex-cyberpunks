@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativo da Segurança em TI</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Segurança TI Informa">
+            <h1>Informativo da Segurança em TI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artigos.html">Artigos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quiz">
+        <section class="quiz-intro">
+            <h2>Teste seus conhecimentos em Segurança da TI</h2>
+            <p>Responda nosso quiz com 10 questões sobre diversos tópicos de segurança da informação. Todas as perguntas são baseadas em artigos do nosso site.</p>
+            
+            <div class="quiz-info">
+                <div class="info-box">
+                    <h3>10 questões</h3>
+                    <p>Selecionadas aleatoriamente</p>
+                </div>
+                <div class="info-box">
+                    <h3>Tempo livre</h3>
+                    <p>Sem pressa para responder</p>
+                </div>
+                <div class="info-box">
+                    <h3>Feedback completo</h3>
+                    <p>Explicações e links para aprender mais</p>
+                </div>
+            </div>
+            
+            <a href="#">
+                <button id="iniciar-quiz" class="btn-primario">Iniciar Quiz</button>
+            </a>
+        </section>
+
+        <section class="quiz-container" style="display: none;">
+            <div class="quiz-progress">
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress-text">Questão 1 de 10</div>
+            </div>
+
+            <div class="quiz-question">
+                <h3 id="question-text"></h3>
+                <div id="options-container" class="options-container">
+                    <!-- Opções serão inseridas aqui pelo JavaScript -->
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="prev-question" class="btn-secundario" disabled>Anterior</button>
+                <button id="next-question" class="btn-primario">Próxima</button>
+                <button id="submit-quiz" class="btn-primario" style="display: none;">Enviar Respostas</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="artigos.html">Artigos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+        <p>© 2025 Grupo Cyberpunks - Unidrummond</p>
+    </footer>
+
+    <!-- Carrega perguntas dinâmicas -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>
