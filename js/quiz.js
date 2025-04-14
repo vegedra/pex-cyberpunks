@@ -374,30 +374,39 @@ function embaralhar(array) {
   return array;
 }
 
-const perguntasSelecionadas = embaralhar([...bancoQuestoes]).slice(0, 10);
-const quizForm = document.getElementById("quizForm");
+function carregarQuiz() {
+  const perguntasSelecionadas = embaralhar([...bancoQuestoes]).slice(0, 10);
+  window.perguntasSelecionadas = perguntasSelecionadas;
 
-perguntasSelecionadas.forEach((q, i) => {
-  const div = document.createElement("div");
-  div.classList.add("question-result");
-  div.innerHTML = `<strong>${i + 1}. ${q.pergunta}</strong>`;
+  const quizForm = document.getElementById("quizForm");
+  quizForm.innerHTML = ""; // Limpar conteúdo anterior
 
-  const opcoesDiv = document.createElement("div");
-  opcoesDiv.classList.add("options");
+  perguntasSelecionadas.forEach((q, i) => {
+    const div = document.createElement("div");
+    div.classList.add("question-result");
+    div.innerHTML = `<strong>${i + 1}. ${q.pergunta}</strong>`;
 
-  q.opcoes.forEach((op, j) => {
-    const label = document.createElement("label");
-    label.innerHTML = `<input type="radio" name="q${i}" value="${j}"> ${op}`;
-    opcoesDiv.appendChild(label);
+    const opcoesDiv = document.createElement("div");
+    opcoesDiv.classList.add("options");
+
+    q.opcoes.forEach((op, j) => {
+      const label = document.createElement("label");
+      label.innerHTML = `<input type="radio" name="q${i}" value="${j}"> ${op}`;
+      opcoesDiv.appendChild(label);
+    });
+
+    div.appendChild(opcoesDiv);
+    quizForm.appendChild(div);
   });
 
-  div.appendChild(opcoesDiv);
-  quizForm.appendChild(div);
-});
+  document.getElementById("resultado").innerHTML = "";
+}
 
 function verificarRespostas() {
   let acertos = 0;
   let respondidas = 0;
+
+  const perguntasSelecionadas = window.perguntasSelecionadas;
 
   perguntasSelecionadas.forEach((q, i) => {
     const resposta = document.querySelector(`input[name='q${i}']:checked`);
@@ -422,5 +431,19 @@ function verificarRespostas() {
     mensagem = "Atenção! É importante estudar mais sobre segurança da informação.";
   }
 
-  document.getElementById("resultado").innerHTML = `<div class='score-container'><div class='score-circle'>${acertos}/10</div></div><p>${mensagem}</p>`;
+  document.getElementById("resultado").innerHTML = `
+    <div class='score-container'>
+      <div class='score-circle'>${acertos}/10</div>
+    </div>
+    <p>${mensagem}</p>
+    <div class='action-buttons'>
+      <button class='btn-secundario' onclick='reiniciarQuiz()'>Refazer Quiz</button>
+    </div>`;
 }
+
+function reiniciarQuiz() {
+  carregarQuiz();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.onload = carregarQuiz;
