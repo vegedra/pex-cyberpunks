@@ -1,81 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativo da Segurança em TI</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informativo da Segurança em TI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Segurança TI Informa">
-            <h1>Informativo da Segurança em TI</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="artigos.html">Artigos</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Segurança TI Informa">
+      <h1>Informativo da Segurança em TI</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a class="active" href="artigos.html">Artigos</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="artigos">
-        <h2>Artigos sobre Segurança da TI</h2>
-        
-        <section id="filtros">
-            <h3>Filtrar por:</h3>
-            <div class="filtro-categoria">
-                <label for="categoria">Categoria:</label>
-                <select id="categoria">
-                    <option value="todos">Todos</option>
-                    <option value="malware">Malware</option>
-                    <option value="phishing">Phishing</option>
-                    <option value="senhas">Senhas</option>
-                    <option value="redes">Redes</option>
-                </select>
-            </div>
-        </section>
+  <main class="artigos">
+    <h2>Artigos sobre Segurança da TI</h2>
+    <section id="filtros">
+      <h3>Filtrar por:</h3>
+      <select id="categoria">
+        <option value="todos">Todos</option>
+        <option value="conscientizacao">Conscientização</option>
+        <option value="phishing">Phishing</option>
+        <option value="senhas">Senhas</option>
+        <option value="engenharia-social">Engenharia Social</option>
+        <option value="mobilidade">Mobilidade</option>
+        <option value="backup">Backup</option>
+        <option value="redes">Redes</option>
+        <option value="autenticacao">Autenticação</option>
+        <option value="politicas">Políticas & Métricas</option>
+      </select>
+    </section>
 
-        <section class="lista-artigos">
-            <article id="phishing" data-categoria="phishing">
-                <h3>O que é phishing e como evitar?</h3>
-                <p class="meta">Publicado em: 15/10/2023 | Categoria: Phishing</p>
-                <p>Phishing é uma técnica de engenharia social onde criminosos se passam por instituições confiáveis para roubar informações sensíveis...</p>
-                <a href="artigo-phishing.html">Ler artigo completo</a>
-            </article>
+    <section class="lista-artigos">
+      <article data-categoria="conscientizacao">
+        <h3>Por que investir em programas de conscientização?</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Conscientização</p>
+        <p>Entenda como treinamentos contínuos reduzem riscos humanos e fortalecem a cultura de segurança...</p>
+        <a href="artigos/artigo-conscientizacao.html">Ler artigo completo</a>
+      </article>
 
-            <article id="2fa" data-categoria="senhas">
-                <h3>Autenticação em dois fatores: por que usar?</h3>
-                <p class="meta">Publicado em: 10/10/2023 | Categoria: Senhas</p>
-                <p>A autenticação em dois fatores (2FA) adiciona uma camada extra de segurança ao processo de login, exigindo duas formas de verificação...</p>
-                <a href="artigo-2fa.html">Ler artigo completo</a>
-            </article>
+      <article data-categoria="phishing">
+        <h3>O que é phishing e como evitar?</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Phishing</p>
+        <p>Saiba identificar e-mails falsos antes de clicar em qualquer link suspeito...</p>
+        <a href="artigos/artigo-phishing.html">Ler artigo completo</a>
+      </article>
 
-            <article id="ransomware" data-categoria="malware">
-                <h3>Ransomware: como proteger sua empresa</h3>
-                <p class="meta">Publicado em: 05/10/2023 | Categoria: Malware</p>
-                <p>Ransomware é um tipo de malware que criptografa os arquivos da vítima e exige um resgate para liberar o acesso...</p>
-                <a href="artigo-ransomware.html">Ler artigo completo</a>
-            </article>
-        </section>
-    </main>
+      <article data-categoria="senhas">
+        <h3>Como criar e gerenciar senhas seguras</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Senhas</p>
+        <p>Dicas práticas para combinar complexidade e memorização sem sacrificar a segurança...</p>
+        <a href="artigos/artigo-senhas.html">Ler artigo completo</a>
+      </article>
 
-    <footer>
-        <div class="footer-links">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="artigos.html">Artigos</a></li>
-                <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </div>
-        <p>© 2025 Grupo Cyberpunks - Unidrummond</p>
-    </footer>
+      <article data-categoria="engenharia-social">
+        <h3>Engenharia social: entenda e previna</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Engenharia Social</p>
+        <p>Conheça as principais táticas de manipulação e como se proteger delas...</p>
+        <a href="artigos/artigo-engenharia-social.html">Ler artigo completo</a>
+      </article>
 
-    <script src="js/script.js"></script>
+      <article data-categoria="mobilidade">
+        <h3>Segurança em dispositivos móveis</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Mobilidade</p>
+        <p>Boas práticas para uso de smartphones e tablets em ambientes corporativos...</p>
+        <a href="artigos/artigo-mobilidade.html">Ler artigo completo</a>
+      </article>
+
+      <article data-categoria="backup">
+        <h3>Backup e recuperação de dados</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Backup</p>
+        <p>Por que e como manter cópias de segurança confiáveis para minimizar prejuízos...</p>
+        <a href="artigos/artigo-backup.html">Ler artigo completo</a>
+      </article>
+
+      <article data-categoria="redes">
+        <h3>Redes seguras: firewalls e VPN</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Redes</p>
+        <p>Entenda o papel dos firewalls de próxima geração e de conexões VPN criptografadas...</p>
+        <a href="artigos/artigo-redes.html">Ler artigo completo</a>
+      </article>
+
+      <article data-categoria="autenticacao">
+        <h3>Autenticação forte: MFA e beyond</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Autenticação</p>
+        <p>Veja como a autenticação multifator e métodos avançados elevam o nível de proteção...</p>
+        <a href="artigos/artigo-autenticacao.html">Ler artigo completo</a>
+      </article>
+
+      <article data-categoria="politicas">
+        <h3>Métricas e políticas de treinamento</h3>
+        <p class="meta">Publicado em: 28/04/2025 | Categoria: Políticas & Métricas</p>
+        <p>Como medir o ROI dos treinamentos e manter a equipe sempre atualizada...</p>
+        <a href="artigos/artigo-politicas.html">Ler artigo completo</a>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <footer>
+    <p>© 2025 Grupo Cyberpunks - Unidrummond</p>
+  </footer>
 </body>
 </html>

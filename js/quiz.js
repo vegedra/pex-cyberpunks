@@ -1,368 +1,603 @@
 const bancoQuestoes = [
   {
-    pergunta: "O que significa TI?",
-    opcoes: ["Tecnologia da Informação", "Transporte Integrado", "Tecnologia Industrial", "Teoria da Inovação"],
-    correta: 0
-  },
-  {
-    pergunta: "O que é um antivírus?",
-    opcoes: ["Um tipo de firewall", "Um programa de produtividade", "Um software que combate ameaças virtuais", "Um sistema de backup"],
-    correta: 2
-  },
-  {
-    pergunta: "O que caracteriza uma senha forte?",
-    opcoes: ["Apenas letras minúsculas", "Sequência numérica simples", "Letras, números e caracteres especiais", "Nome da empresa"],
-    correta: 2
-  },
-  {
-    pergunta: "O que é phishing?",
-    opcoes: ["Atualização de software", "Invasão por força bruta", "Ataque que utiliza e-mails falsos para roubo de dados", "Proteção de rede"],
-    correta: 2
-  },
-  {
-    pergunta: "Para que serve um firewall?",
-    opcoes: ["Aumentar a velocidade da internet", "Controlar o acesso a redes", "Fazer backup", "Apagar arquivos desnecessários"],
+    pergunta: "Qual é o principal objetivo de um programa de conscientização em segurança para funcionários?",
+    opcoes: [
+      "Aumentar a produtividade sem precisar de treinamentos",
+      "Ensinar boas práticas para reduzir riscos de segurança",
+      "Substituir a necessidade de ferramentas de segurança",
+      "Controlar o acesso físico às instalações"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um backup?",
-    opcoes: ["Um tipo de vírus", "Cópia de segurança de dados", "Programa de edição de texto", "Sistema de impressão"],
+    pergunta: "O que caracteriza um e-mail de phishing básico?",
+    opcoes: [
+      "Remetente conhecido e lista de contatos pessoais",
+      "Mensagem com erros ortográficos e solicitação de dados sensíveis",
+      "Uso de anexos em formato PDF apenas",
+      "Envio apenas para um único destinatário"
+    ],
     correta: 1
   },
   {
-    pergunta: "Qual destes é um exemplo de autenticação multifator?",
-    opcoes: ["Apenas senha", "Nome de usuário", "E-mail pessoal", "Senha + biometria"],
+    pergunta: "Qual prática um usuário final deve adotar para criar senhas seguras?",
+    opcoes: [
+      "Reutilizar senhas de outros serviços",
+      "Utilizar apenas números sequenciais",
+      "Combinar letras maiúsculas, minúsculas, números e símbolos",
+      "Anotar a senha ao lado do computador"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Ao identificar um e-mail suspeito, qual ação é a mais recomendada?",
+    opcoes: [
+      "Clicar no link para verificar a autenticidade",
+      "Responder pedindo confirmação da origem",
+      "Encaminhar para todos os colegas para alerta geral",
+      "Marcar como spam ou phishing e deletar"
+    ],
     correta: 3
   },
   {
-    pergunta: "O que é criptografia?",
-    opcoes: ["Exclusão de arquivos", "Codificação de dados para proteger informações", "Formatação de disco rígido", "Atualização de sistema"],
+    pergunta: "O que é 'shoulder surfing' no contexto de segurança?",
+    opcoes: [
+      "Técnica de criptografar dados em trânsito",
+      "Observar por cima do ombro para obter informações sigilosas",
+      "Uso de software para capturar teclas digitadas",
+      "Envio massivo de e-mails maliciosos"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um ataque DDoS?",
-    opcoes: ["Sobre carga de tráfego para derrubar um serviço", "Roubo de senhas", "Infecção por vírus", "Acesso não autorizado a um computador"],
-    correta: 0
-  },
-  {
-    pergunta: "Qual destes NÃO é um método seguro para navegar na internet?",
-    opcoes: ["Usar HTTPS", "Atualizar softwares regularmente", "Clicar em links desconhecidos", "Usar VPN"],
+    pergunta: "Qual ação reforça a segurança quando se trabalha em locais públicos?",
+    opcoes: [
+      "Usar sempre conexões Wi-Fi abertas",
+      "Deixar a tela do equipamento visível a todos",
+      "Utilizar VPN e bloqueio automático de tela",
+      "Compartilhar o cabo de rede com colegas"
+    ],
     correta: 2
   },
   {
-    pergunta: "Qual é o objetivo principal de realizar backup de dados?",
-    opcoes: ["Aumentar a velocidade do computador", "Ter cópias de segurança para recuperação em caso de perda", "Melhorar o desempenho da internet", "Liberar espaço no disco rígido"],
+    pergunta: "Em treinamentos sobre engenharia social, que tipo de ataque costuma ser demonstrado?",
+    opcoes: [
+      "Injeção SQL em servidores web",
+      "Simulação de ligação telefônica solicitando senha",
+      "Instalação de antivírus corporativo",
+      "Uso de cabos protegidos"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é malware?",
-    opcoes: ["Um tipo de hardware", "Software malicioso que danifica sistemas", "Programa de edição de fotos", "Sistema operacional alternativo"],
-    correta: 1
-  },
-  {
-    pergunta: "Por que é importante usar autenticação por senha?",
-    opcoes: ["Para tornar o computador mais rápido", "Porque é exigido por lei", "Para proteger o acesso não autorizado a contas e sistemas", "Para economizar energia"],
+    pergunta: "Qual prática reforça a proteção de dispositivos móveis corporativos?",
+    opcoes: [
+      "Desativar todas as atualizações automáticas",
+      "Usar senha fraca para facilitar o acesso",
+      "Habilitar bloqueio por biometria ou PIN e criptografia de armazenamento",
+      "Compartilhar o dispositivo entre vários usuários"
+    ],
     correta: 2
   },
   {
-    pergunta: "O que é engenharia social?",
-    opcoes: ["Técnica de construção civil", "Tipo de software educativo", "Forma de criptografia", "Método de manipulação psicológica para obter informações confidenciais"],
-    correta: 3
-  },
-  {
-    pergunta: "Por que os softwares devem ser mantidos atualizados?",
-    opcoes: ["Porque novas versões são mais bonitas", "Para corrigir vulnerabilidades de segurança e bugs", "Para aumentar o preço do produto", "Porque versões antigas funcionam melhor"],
+    pergunta: "O que todo usuário deve fazer ao notar comportamento estranho no computador?",
+    opcoes: [
+      "Continuar usando normalmente",
+      "Registrar o ocorrido em um canal oficial de incidentes",
+      "Tentar remover o vírus por conta própria",
+      "Ignorar até a próxima manutenção"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que caracteriza uma rede Wi-Fi protegida?",
-    opcoes: ["Está sempre aberta para qualquer pessoa", "Usa criptografia (como WPA2/WPA3) e senha forte", "Tem o nome visível para todos", "Não precisa de senha"],
+    pergunta: "Qual é a principal vantagem de um quiz interativo em treinamentos de segurança?",
+    opcoes: [
+      "Substituir a necessidade de política de segurança",
+      "Engajar participantes e reforçar o aprendizado",
+      "Diminuir o tempo de uso de antivírus",
+      "Aumentar o tráfego de e-mail interno"
+    ],
     correta: 1
   },
   {
-    pergunta: "Como evitar o acesso não autorizado ao sistema?",
-    opcoes: ["Usar senhas fracas e fáceis de lembrar", "Compartilhar credenciais com colegas", "Utilizar autenticação forte e não divulgar credenciais", "Desativar todas as proteções"],
+    pergunta: "Em conscientização de phishing, quais elementos ajudam a detectar um link falso?",
+    opcoes: [
+      "Domínio parecido, mas grafia diferente do oficial",
+      "Uso exclusivo de HTTPS sem certificado válido",
+      "Ícones coloridos e design moderno",
+      "Assinatura automática da empresa"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "O que deve conter um programa de treinamento eficaz para novos funcionários?",
+    opcoes: [
+      "Apenas políticas de férias e benefícios",
+      "Sessões sobre boas práticas de segurança desde o primeiro dia",
+      "Demonstrações de software de mídia social",
+      "Lista de contatos pessoais de todos os colegas"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é a melhor forma de armazenar senhas de múltiplas contas?",
+    opcoes: [
+      "Em planilha de texto não criptografada",
+      "No navegador sem master password",
+      "Em gerenciador de senhas confiável",
+      "Em post-it colado no monitor"
+    ],
     correta: 2
   },
   {
-    pergunta: "O que são cookies e como eles afetam a privacidade?",
-    opcoes: ["Arquivos que armazenam dados de navegação e podem rastrear usuários", "Programas antivírus", "Dispositivos de hardware", "Tipos de vírus"],
+    pergunta: "O que é tailgating em segurança física?",
+    opcoes: [
+      "Uso de VPN para acessar rede remota",
+      "Entrar em área restrita seguindo alguém sem autorização",
+      "Escaneamento de vulnerabilidades em servidores",
+      "Conectar dispositivos USB desconhecidos"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Durante um treinamento, qual ferramenta pode simular um ataque de phishing?",
+    opcoes: [
+      "Software de criptografia",
+      "Plataforma de phishing controlada pela TI",
+      "VPN empresarial",
+      "Backup automatizado"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é o benefício de incluir casos reais de ataques em treinamentos?",
+    opcoes: [
+      "Aumentar o tempo de sessão sem valor prático",
+      "Mostrar consequências reais e reforçar a importância das boas práticas",
+      "Substituir políticas formais",
+      "Tornar o treinamento mais teórico e abstrato"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em conscientização móvel, o que se deve evitar ao usar redes públicas?",
+    opcoes: [
+      "Usar VPN corporativa",
+      "Compartilhar arquivos via Bluetooth sem controle",
+      "Bloquear automaticamente a tela",
+      "Atualizar apps regularmente"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual indicador demonstra retenção de aprendizado após um treinamento?",
+    opcoes: [
+      "Aplicação consistente das práticas em avaliações simuladas",
+      "Número de alunos inscritos",
+      "Quantidade de material impresso entregue",
+      "Tempo gasto na sala de treinamento"
+    ],
     correta: 0
   },
   {
-    pergunta: "Qual a importância de bloquear a estação de trabalho ao se ausentar?",
-    opcoes: ["Para economizar energia", "Para evitar acesso não autorizado durante a ausência", "Porque o computador funciona melhor bloqueado", "Para atualizar o sistema automaticamente"],
+    pergunta: "Qual técnica ajuda a evitar ataques por engenharia social presencial?",
+    opcoes: [
+      "Deixar portas destrancadas para facilitar evacuação",
+      "Verificar identidade antes de liberar acesso a visitantes",
+      "Compartilhar crachás entre colegas",
+      "Desativar alarmes de acesso"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que são atualizações de segurança?",
-    opcoes: ["Novos jogos para o computador", "Correções que protegem contra vulnerabilidades conhecidas", "Aumento de capacidade do disco rígido", "Mudanças na aparência do sistema"],
+    pergunta: "Por que é importante fazer treinamentos periódicos em vez de apenas uma vez?",
+    opcoes: [
+      "Para usar mais recursos de TI",
+      "Porque as ameaças evoluem e a memória humana se deteriora",
+      "Para criar um banco de dados de e-mails",
+      "Para substituir sistemas de autenticação"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que significa o termo \"dados sensíveis\"?",
-    opcoes: ["Informações públicas que qualquer um pode ver", "Dados confidenciais que exigem proteção especial", "Arquivos temporários do sistema", "Mensagens de e-mail comuns"],
-    correta: 1
-  },
-  {
-    pergunta: "O que fazer ao receber um e-mail suspeito?",
-    opcoes: ["Abrir todos os anexos para verificar", "Clicar em links para confirmar se é legítimo", "Não abrir, marcar como spam e deletar", "Encaminhar para todos os contatos"],
+    pergunta: "Num programa de conscientização sobre senhas, qual métrica interna pode ser usada para medir sucesso?",
+    opcoes: [
+      "Percentual de funcionários que solicitaram troca de senha",
+      "Quantidade de backups realizados",
+      "Número de relatórios de incidentes de phishing bem-sucedidos",
+      "Quantidade de impressões de políticas de segurança"
+    ],
     correta: 2
   },
   {
-    pergunta: "Qual a diferença entre login e senha?",
-    opcoes: ["Login é o nome de usuário, senha é a chave de acesso", "São a mesma coisa", "Login é a senha, senha é o usuário", "Nenhuma diferença"],
-    correta: 0
-  },
-  {
-    pergunta: "O que significa criptografia?",
-    opcoes: ["Exclusão permanente de arquivos", "Codificação de dados para proteger informações", "Compactação de arquivos para economizar espaço", "Formatação de dispositivos"],
-    correta: 1
-  },
-  {
-    pergunta: "Por que não se deve compartilhar senhas?",
-    opcoes: ["Porque senhas são caras", "Para evitar que outras pessoas acessem suas contas sem autorização", "Porque senhas mudam sozinhas", "Porque o computador pode travar"],
-    correta: 1
-  },
-  {
-    pergunta: "O que é um ataque de força bruta?",
-    opcoes: ["Formatação rápida do disco rígido", "Exclusão acidental de arquivos", "Tipo de backup automático", "Tentativa de adivinhar senhas testando várias combinações"],
-    correta: 3
-  },
-  {
-    pergunta: "Qual destes NÃO é um método seguro para criar senhas?",
-    opcoes: ["Usar combinações aleatórias de letras, números e símbolos", "Criar senhas longas com mais de 12 caracteres", "Usar frases complexas como senha", "Usar sequências simples como \"123456\""],
-    correta: 3
-  },
-  {
-    pergunta: "O que é autenticação em dois fatores (2FA)?",
-    opcoes: ["Usar duas senhas iguais", "Verificação em duas etapas (ex: senha + código SMS)", "Ter duas contas de e-mail", "Fazer login duas vezes"],
-    correta: 1
-  },
-  {
-    pergunta: "O que é VPN e para que serve?",
-    opcoes: ["Rede virtual privada que criptografa a conexão", "Tipo de vírus", "Programa de edição de vídeo", "Sistema de backup"],
-    correta: 0
-  },
-  {
-    pergunta: "Qual destes é um exemplo de boa prática de segurança?",
-    opcoes: ["Usar a mesma senha em todos os serviços", "Ativar atualizações automáticas", "Ignorar e-mails de phishing", "Nunca fazer backup"],
-    correta: 1
-  },
-  {
-    pergunta: "O que é autenticação de dois fatores (2FA)?",
-    opcoes: ["Verificação em duas etapas (ex: senha + código SMS)", "Usar duas senhas diferentes", "Ter duas contas de e-mail", "Fazer login duas vezes no mesmo sistema"],
-    correta: 0
-  },
-  {
-    pergunta: "O que são patches de segurança?",
-    opcoes: ["Correções para vulnerabilidades conhecidas", "Atualizações estéticas do sistema", "Novos recursos de hardware", "Programas antivírus"],
-    correta: 0
-  },
-  {
-    pergunta: "Como funciona um ransomware?",
-    opcoes: ["Rouba senhas de usuários", "Criptografa arquivos e exige resgate para liberá-los", "Espalha spam por e-mail", "Monitora atividades do usuário"],
-    correta: 1
-  },
-  {
-    pergunta: "O que é um ataque DDoS?",
-    opcoes: ["Roubo de dados sensíveis", "Sobrecarga de um serviço com tráfego falso", "Infecção por vírus em dispositivos móveis", "Acesso não autorizado a redes Wi-Fi"],
-    correta: 1
-  },
-  {
-    pergunta: "O que são portas de rede e por que devem ser monitoradas?",
-    opcoes: ["Conexões físicas de cabos de internet", "Dispositivos de armazenamento em nuvem", "Pontos de entrada/saída de dados que podem ser explorados por invasores", "Ferramentas de backup automático"],
+    pergunta: "Durante um exercício de simulação de phishing, qual taxa de clique é considerada aceitável para melhoria?",
+    opcoes: [
+      "Acima de 80%",
+      "Entre 50% e 70%",
+      "Abaixo de 20%",
+      "Sempre 100%"
+    ],
     correta: 2
   },
   {
-    pergunta: "Qual a importância de um antivírus corporativo?",
-    opcoes: ["Aumentar a velocidade da rede", "Substituir firewalls", "Proteger múltiplos dispositivos contra ameaças avançadas", "Bloquear apenas e-mails indesejados"],
+    pergunta: "Qual abordagem pedagógica fortalece o engajamento em treinamentos de segurança?",
+    opcoes: [
+      "Aula expositiva única sem práticas",
+      "Metodologia hands-on com cenários realistas",
+      "Apenas leitura de manuais técnicos",
+      "Vídeos genéricos sem interação"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em treinamentos de BYOD, o que deve ser enfatizado?",
+    opcoes: [
+      "Uso irrestrito de aplicativos não autorizados",
+      "Instalação de software corporativo de gerenciamento (MDM)",
+      "Compartilhamento de senhas entre usuários",
+      "Desativar criptografia do dispositivo"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual norma regula práticas de conscientização em empresas brasileiras?",
+    opcoes: [
+      "NBR ISO 9001",
+      "NBR ISO/IEC 27001",
+      "Lei Maria da Penha",
+      "Código de Trânsito Brasileiro"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Como avaliar se o treinamento melhorou a postura de segurança?",
+    opcoes: [
+      "Contagem de acessos à intranet",
+      "Auditoria de políticas e redução de incidentes",
+      "Impressão de documentos confidenciais",
+      "Uso de planilhas antigas"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual método auxilia na identificação proativa de novos riscos sociais?",
+    opcoes: [
+      "Análise de logs de firewall",
+      "Realização de entrevistas periódicas com funcionários",
+      "Compartilhamento de credenciais",
+      "Desativação de antivírus"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Na conscientização sobre phishing por SMS (smishing), qual ponto é crucial?",
+    opcoes: [
+      "Usar sempre links curtos",
+      "Verificar remetente e desconfiar de pedidos urgentes",
+      "Autorizar todos os acessos",
+      "Ignorar políticas de TI"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "O que caracteriza um programa de 'security champions' dentro de uma equipe?",
+    opcoes: [
+      "Representantes que disseminam boas práticas de segurança entre pares",
+      "Líderes que implementam senhas fracas",
+      "Equipe dedicada a backup de dados",
+      "Grupo que ignora atualizações"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual tecnologia pode ser apresentada em treinamentos para reforçar MFA?",
+    opcoes: [
+      "Firewalls de próxima geração",
+      "Tokens de hardware ou aplicativos autenticadores",
+      "USBs públicos",
+      "Antivírus gratuitos"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em avaliações pós-treinamento, qual tipo de questão é mais eficaz?",
+    opcoes: [
+      "Fechadas e de múltipla escolha com cenários reais",
+      "Perguntas sem resposta correta",
+      "Apenas questões dissertativas genéricas",
+      "Questões de conhecimento irrelevante"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual prática de conscientização reduz riscos de engenharia social em telefonemas?",
+    opcoes: [
+      "Responder imediatamente a qualquer solicitação",
+      "Confirmar identidade em canal oficial antes de fornecer informações",
+      "Compartilhar senhas por SMS",
+      "Permitir acesso irrestrito"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em um cenário de home office, qual ponto deve constar no treinamento?",
+    opcoes: [
+      "Desligar o antivírus para economizar recursos",
+      "Uso de rede doméstica sem firewall",
+      "Seguir diretrizes de uso de VPN e bloqueio de tela",
+      "Compartilhar equipamentos com estranhos"
+    ],
     correta: 2
   },
   {
-    pergunta: "O que é um firewall de próxima geração?",
-    opcoes: ["Um antivírus básico", "Sistema que combina firewall tradicional com filtragem avançada (ex: IPS, inspeção profunda de pacotes)", "Ferramenta de backup em nuvem", "Dispositivo que apenas bloqueia portas"],
+    pergunta: "Qual indicador qualitativo pode mostrar eficácia de um workshop de segurança?",
+    opcoes: [
+      "Número de slides exibidos",
+      "Feedback positivo e relatos de casos de sucesso",
+      "Quantidade de café consumido",
+      "Tamanho da sala de treinamento"
+    ],
     correta: 1
   },
   {
-    pergunta: "Como identificar um site falso (phishing site)?",
-    opcoes: ["Verificar se o URL começa com \"HTTPS\" e se o certificado SSL é válido", "Confiar em e-mails solicitando dados pessoais", "Clicar em links suspeitos para testar", "Ignorar erros de certificado digital"],
+    pergunta: "Por que incluir líderes de equipe em treinamentos de segurança?",
+    opcoes: [
+      "Para centralizar decisões sem envolver o time",
+      "Porque influenciam comportamento e reforçam políticas",
+      "Para dividir credenciais com todos",
+      "Para simplificar processos de TI"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em campanhas internas, qual mídia costuma gerar maior alcance?",
+    opcoes: [
+      "Comunicados em murais físicos apenas",
+      "E-mail corporativo e intranet integrados",
+      "Mensagens via aplicativos pessoais",
+      "Entrega de panfleto impresso"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "O que é 'vishing' em segurança da informação?",
+    opcoes: [
+      "Phishing via e-mail",
+      "Phishing via ligação telefônica",
+      "Invasão física de servidores",
+      "Uso de software de gestão de patches"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Durante reciclagem de treinamento, qual frequência mínima é recomendada?",
+    opcoes: [
+      "A cada 5 anos",
+      "A cada 3 meses",
+      "Apenas na admissão",
+      "Nunca repetir"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual tipo de linguagem usar em materiais de conscientização para maior engajamento?",
+    opcoes: [
+      "Termos técnicos avançados apenas",
+      "Exemplo práticos, linguagem simples e analogias do dia a dia",
+      "Textos longos e sem exemplos",
+      "Somente normas legais"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual abordagem fortalece a cultura de segurança na empresa?",
+    opcoes: [
+      "Responsabilizar indivíduos isoladamente",
+      "Reconhecer boas práticas e premiar comportamentos seguros",
+      "Ignorar sugestões de funcionários",
+      "Aplicar punições sem diálogo prévio"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em um programa avançado de conscientização, qual método de avaliação é considerado mais robusto?",
+    opcoes: [
+      "Testes de múltipla escolha sem contexto",
+      "Simulações red team com cenários reais",
+      "Leitura de políticas sem aplicação prática",
+      "Questionários de opinião anônimos"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual métrica de negócio pode demonstrar o ROI de treinamentos em segurança?",
+    opcoes: [
+      "Tempo médio de login dos usuários",
+      "Redução no custo médio por incidente de segurança",
+      "Número de downloads de antivírus gratuitos",
+      "Quantidade de e-mails enviados internamente"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em um ambiente de alta rotatividade, como manter o nível de conscientização?",
+    opcoes: [
+      "Treinamentos esporádicos de alta duração",
+      "Microlearning contínuo e integração automática de novos funcionários",
+      "Apenas políticas no manual do funcionário",
+      "Ignorar novas contratações"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual abordagem de gamificação pode aumentar retenção em treinamentos?",
+    opcoes: [
+      "Pontuação e leaderboard com recompensas simbólicas",
+      "Apenas vídeos sem interação",
+      "Material estático impresso",
+      "Sessões monótonas de slides"
+    ],
     correta: 0
   },
   {
-    pergunta: "O que é um certificado SSL?",
-    opcoes: ["Licença de software", "Protocolo que criptografa a comunicação entre navegador e servidor", "Tipo de vírus disfarçado", "Sistema de armazenamento em nuvem"],
+    pergunta: "Em um programa global, como assegurar consistência de conscientização?",
+    opcoes: [
+      "Traduzir literalmente sem adaptar ao contexto cultural",
+      "Localizar conteúdo para culturas e idiomas, mantendo padrões mínimos",
+      "Usar apenas uma língua em todas as regiões",
+      "Ignorar diferenças legais locais"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um spyware e como ele age?",
-    opcoes: ["Hardware que melhora a velocidade da internet", "Software que monitora atividades do usuário sem consentimento", "Ferramenta de otimização de sistema", "Tipo de firewall"],
-    correta: 1
-  },
-  {
-    pergunta: "Por que evitar o uso de dispositivos USB desconhecidos?",
-    opcoes: ["Sempre danificam o computador", "São mais lentos que os conhecidos", "Podem conter malware ou roubar dados", "Não há riscos reais"],
-    correta: 2
-  },
-  {
-    pergunta: "Como funciona a criptografia de ponta a ponta?",
-    opcoes: ["Dados são criptografados apenas no servidor", "Qualquer pessoa na rede pode ler os dados", "Apenas o remetente e o destinatário podem decifrar a mensagem", "Substitui a necessidade de senhas"],
-    correta: 2
-  },
-  {
-    pergunta: "O que são permissões de usuário em sistemas?",
-    opcoes: ["Senhas temporárias", "Limites de armazenamento", "Regras que definem o que um usuário pode ou não acessar", "Níveis de velocidade de internet"],
-    correta: 2
-  },
-  {
-    pergunta: "O que é o gerenciamento de identidade e acesso (IAM)?",
-    opcoes: ["Sistema que controla quem acessa quais recursos em uma rede", "Ferramenta de edição de documentos", "Tipo de antivírus", "Protocolo de rede"],
+    pergunta: "Qual técnica avançada pode detectar cliques em links maliciosos antes do usuário perceber?",
+    opcoes: [
+      "Análise de tráfego no endpoint com sandboxing de URLs",
+      "Desativar firewall para melhor desempenho",
+      "Backup de todos os e-mails recebidos",
+      "Compartilhar credenciais internamente"
+    ],
     correta: 0
   },
   {
-    pergunta: "Como proteger dispositivos móveis corporativos?",
-    opcoes: ["Usar senhas fracas", "Desativar todas as atualizações", "Ativar remotamente apagamento de dados em caso de perda/roubo", "Ignorar políticas de segurança"],
-    correta: 2
-  },
-  {
-    pergunta: "O que é uma VPN e para que serve?",
-    opcoes: ["Antivírus para redes sociais", "Sistema de backup local", "Rede virtual que criptografa a conexão e mascara o IP", "Ferramenta de edição de vídeo"],
-    correta: 2
-  },
-  {
-    pergunta: "Como identificar vulnerabilidades em sistemas?",
-    opcoes: ["Ignorar atualizações de segurança", "Usar ferramentas de varredura (ex: pentests, scanners de vulnerabilidade)", "Desativar firewalls", "Não monitorar logs"],
+    pergunta: "No contexto de ABAC (Attribute-Based Access Control), como o treinamento deve abordar a informação?",
+    opcoes: [
+      "Focar apenas em papéis estáticos",
+      "Enfatizar entendimento de atributos de usuário, recurso e ambiente",
+      "Ignorar requisitos de contexto",
+      "Ensinar senha única para todos"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um keylogger?",
-    opcoes: ["Tipo de firewall", "Dispositivo que registra tudo o que é digitado no teclado", "Programa de backup", "Antivírus avançado"],
+    pergunta: "Ao medir maturidade de um programa de conscientização, qual modelo é recomendado?",
+    opcoes: [
+      "Modelo de Maturidade de Capability (CMMI) adaptado para segurança",
+      "Apenas contagem de treinamentos realizados",
+      "Tamanho da equipe de TI",
+      "Quantidade de políticas documentadas"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual desafio central ao treinar usuários em ambientes DevOps?",
+    opcoes: [
+      "Uso exclusivo de senhas complexas",
+      "Integração contínua de práticas de segurança sem atrasar entregas",
+      "Isolamento total da TI",
+      "Proibição de automação"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é segmentação de rede?",
-    opcoes: ["Dividir a rede em partes isoladas para limitar o acesso de invasores", "Aumentar a velocidade da internet", "Desativar todas as proteções", "Usar a mesma senha para todos os dispositivos"],
-    correta: 0
-  },
-  {
-    pergunta: "O que é uma auditoria de segurança da informação?",
-    opcoes: ["Atualização de hardware", "Formatação de servidores", "Compra de novos equipamentos", "Processo que avalia a eficácia das medidas de segurança"],
-    correta: 3
-  },
-  {
-    pergunta: "O que é um pentest (teste de penetração)?",
-    opcoes: ["Atualização automática de softwares", "Backup de dados críticos", "Simulação de ataques para identificar vulnerabilidades em sistemas", "Monitoramento de redes sociais"],
-    correta: 2
-  },
-  {
-    pergunta: "O que é um SIEM e como ele auxilia na segurança?",
-    opcoes: ["Sistema que consolida e analisa logs para detectar ameaças em tempo real", "Ferramenta de edição de código", "Protocolo de criptografia", "Dispositivo de armazenamento em nuvem"],
-    correta: 0
-  },
-  {
-    pergunta: "Como funciona o modelo Zero Trust?",
-    opcoes: ["Confia em todos os usuários dentro da rede", "Desativa firewalls para melhorar desempenho", "Usa apenas senhas simples", "Exige verificação contínua de identidade, mesmo para usuários internos"],
-    correta: 3
-  },
-  {
-    pergunta: "O que são vulnerabilidades de dia zero (zero-day)?",
-    opcoes: ["Falhas desconhecidas pelos fabricantes, sem patches disponíveis", "Bugs corrigidos em atualizações rotineiras", "Problemas de hardware", "Ameaças já catalogadas em bancos de dados públicos"],
-    correta: 0
-  },
-  {
-    pergunta: "O que é um honeypot em redes?",
-    opcoes: ["Dispositivo que acelera a conexão à internet", "Ferramenta de backup", "Sistema isca para atrair e estudar invasores", "Antivírus para redes sociais"],
-    correta: 2
-  },
-  {
-    pergunta: "Como prevenir exfiltração de dados?",
-    opcoes: ["Permitir acesso irrestrito a todos os usuários", "Usar DLP (Data Loss Prevention) e monitorar transferências suspeitas", "Desativar criptografia", "Ignorar logs de acesso"],
+    pergunta: "Como a análise de comportamento do usuário (UBA) pode complementar treinamentos?",
+    opcoes: [
+      "Desativando logs de auditoria",
+      "Identificando padrões anômalos e reforçando treinamentos direcionados",
+      "Forçando backup de dados irrelevantes",
+      "Aplicando patches manuais"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um SOC (Security Operations Center)?",
-    opcoes: ["Equipe dedicada a monitorar e responder a incidentes de segurança", "Software de edição de imagens", "Tipo de firewall", "Sistema de armazenamento offline"],
-    correta: 0
-  },
-  {
-    pergunta: "Como funciona o gerenciamento de riscos em TI?",
-    opcoes: ["Ignorar ameaças para reduzir custos", "Identificar, avaliar e mitigar riscos com base em probabilidade e impacto", "Usar apenas senhas padrão", "Não realizar backups"],
+    pergunta: "Em organizações altamente regulamentadas, qual aspecto do treinamento é crucial?",
+    opcoes: [
+      "Abordar somente riscos técnicos",
+      "Incluir requisitos legais específicos de conformidade (LGPD, GDPR, etc.)",
+      "Focar apenas em redes sociais",
+      "Ignorar auditorias externas"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é criptografia assimétrica?",
-    opcoes: ["Usa uma única chave para cifrar e decifrar", "Utiliza par de chaves (pública e privada)", "Criptografia sem chaves", "Método obsoleto de proteção"],
-    correta: 1
-  },
-  {
-    pergunta: "Qual a importância da governança de dados?",
-    opcoes: ["Aumentar a velocidade de redes", "Substituir firewalls", "Eliminar backups", "Garantir que dados sejam gerenciados com segurança e conformidade"],
-    correta: 3
-  },
-  {
-    pergunta: "O que é DevSecOps?",
-    opcoes: ["Método para evitar atualizações", "Integrar segurança no ciclo de vida de desenvolvimento de software", "Ferramenta de pentest", "Tipo de malware"],
-    correta: 1
-  },
-  {
-    pergunta: "O que é hardening de sistemas?",
-    opcoes: ["Reduzir superfície de ataque com configurações seguras", "Aumentar permissões para todos os usuários", "Desativar logs de segurança", "Ignorar patches"],
+    pergunta: "Qual é o papel de indicadores KPIs vs. KRIs em um programa de conscientização?",
+    opcoes: [
+      "KPIs medem atividades; KRIs alertam sobre riscos emergentes",
+      "Ambós são sinônimos",
+      "KPIs apenas relatam incidentes",
+      "KRIs apenas calculam custos"
+    ],
     correta: 0
   },
   {
-    pergunta: "Como funcionam as políticas de acesso baseadas em atributos (ABAC)?",
-    opcoes: ["Acesso concedido com base em atributos do usuário, recurso e contexto", "Todos os usuários têm as mesmas permissões", "Não exigem autenticação", "Usam apenas senhas simples"],
-    correta: 0
-  },
-  {
-    pergunta: "O que são ataques de injeção SQL?",
-    opcoes: ["Ataques físicos a servidores", "Roubo de dispositivos USB", "Vírus que infectam apenas redes Wi-Fi", "Inserção de código malicioso em bancos de dados via consultas SQL"],
-    correta: 3
-  },
-  {
-    pergunta: "Qual o papel da ISO/IEC 27001 na segurança da informação?",
-    opcoes: ["Definir protocolos de hardware", "Padronizar boas práticas em um SGSI (Sistema de Gestão de Segurança da Informação)", "Substituir firewalls", "Eliminar a necessidade de backups"],
+    pergunta: "Em um cenário de phishing avançado (spear-phishing), qual camada de defesa humana é essencial?",
+    opcoes: [
+      "Treinamento genérico sem segmentação",
+      "Simulações personalizadas e briefing sobre ameaças específicas",
+      "Uso de senha curta",
+      "Reuniões informais sem objetivo"
+    ],
     correta: 1
   },
   {
-    pergunta: "Como funciona a anonimização de dados?",
-    opcoes: ["Remoção/modificação de informações que permitam identificar indivíduos", "Compartilhamento irrestrito de dados sensíveis", "Exclusão permanente de arquivos", "Criptografia reversível sem chaves"],
-    correta: 0
-  },
-  {
-    pergunta: "O que são APIs seguras e como implementá-las?",
-    opcoes: ["APIs sem qualquer proteção", "APIs com autenticação, criptografia e limites de taxa de requisição", "Ferramentas de edição de código", "Sistemas de backup"],
+    pergunta: "Como a neurociência pode influenciar design de treinamentos em segurança?",
+    opcoes: [
+      "Ignorando limites de atenção",
+      "Incorporando intervalos e reforço espaçado para melhor retenção",
+      "Apenas aumentando o tempo de exposição",
+      "Fornecendo apenas texto extenso"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que são ameaças persistentes avançadas (APT)?",
-    opcoes: ["Ataques prolongados e direcionados, geralmente patrocinados por Estados ou grupos organizados", "Vírus comuns de e-mail", "Falhas de hardware", "Erros de digitação em senhas"],
+    pergunta: "Qual técnica avançada de storytelling reforça mensagens de segurança?",
+    opcoes: [
+      "Relatar casos de sucesso em primeira pessoa e criar vínculos emocionais",
+      "Expor apenas estatísticas sem contexto",
+      "Usar jargão técnico",
+      "Apresentar slides sem narrativa"
+    ],
     correta: 0
   },
   {
-    pergunta: "Qual o impacto da segurança na LGPD?",
-    opcoes: ["Eliminar a necessidade de senhas", "Ignorar vazamentos de dados", "Não afeta empresas brasileiras", "Exigir medidas técnicas e administrativas para proteger dados pessoais"],
-    correta: 3
-  },
-  {
-    pergunta: "Como proteger dados em ambientes de nuvem?",
-    opcoes: ["Armazenar credenciais em arquivos públicos", "Desativar logs de acesso", "Usar criptografia, MFA e políticas de acesso restritivas", "Não usar autenticação"],
-    correta: 2
-  },
-  {
-    pergunta: "Como realizar uma gestão de riscos cibernéticos eficaz?",
-    opcoes: ["Ignorar ameaças desconhecidas", "Identificar ativos, avaliar ameaças e implementar controles baseados em impacto", "Confiar apenas em firewalls básicos", "Não documentar processos"],
+    pergunta: "No uso de AR/VR para conscientização, qual cuidado deve ser tomado?",
+    opcoes: [
+      "Expor usuários a cenários de risco real sem supervisão",
+      "Criar simulações seguras com feedback imediato",
+      "Ignorar métricas de desempenho",
+      "Não testar dispositivos antes do uso"
+    ],
     correta: 1
   },
   {
-    pergunta: "O que é um plano de continuidade de negócios em TI?",
-    opcoes: ["Documento que descreve como manter operações durante/após desastres", "Lista de softwares instalados", "Relatório de vendas mensal", "Política de redes sociais"],
-    correta: 0
+    pergunta: "Como mensurar o impacto de um programa de microlearning?",
+    opcoes: [
+      "Avaliando tempo total gasto",
+      "Medindo resultados em pequenas avaliações frequentes",
+      "Contando número de vídeos assistidos",
+      "Verificando tamanho do arquivo de treinamento"
+    ],
+    correta: 1
   },
   {
-    pergunta: "Como funcionam as auditorias de conformidade?",
-    opcoes: ["Atualizam sistemas automaticamente", "Substituem firewalls", "Verificam se a organização segue regulamentos (ex: LGPD, ISO 27001)", "Geram relatórios financeiros"],
-    correta: 2
+    pergunta: "Para lidar com riscos de insider threats, que componente deve integrar o treinamento?",
+    opcoes: [
+      "Somente políticas de TI",
+      "Sinais de alerta comportamental e canais anônimos de denúncia",
+      "Compartilhamento irrestrito de senhas",
+      "Desativação de logs"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Em um programa global, como alinhar métricas em diferentes fusos?",
+    opcoes: [
+      "Usar apenas horário local de cada país",
+      "Definir referência UTC e converter para relatórios locais",
+      "Desconsiderar diferenças de horário",
+      "Enviar relatórios sem datas"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é o próximo passo após detectar baixa adesão a treinamentos?",
+    opcoes: [
+      "Aumentar punições automáticas",
+      "Revisar formato, conteúdo e canais de entrega para torná-los mais atrativos",
+      "Cancelar todos os treinamentos",
+      "Focar apenas em documentação escrita"
+    ],
+    correta: 1
   }
 ];
 
