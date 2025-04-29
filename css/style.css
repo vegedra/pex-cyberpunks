@@ -218,11 +218,12 @@ footer {
   .membros li {
     display: flex;
     justify-content: space-between;
-    min-width: 400px;
+    width: 100%;
+    flex-wrap: wrap;
     padding: 6px 0;
     border-bottom: 1px solid #ddd;
     font-family: Arial, sans-serif;
-  }
+}
   
   .nome {
     font-weight: bold;
@@ -409,5 +410,16 @@ footer {
     
     .action-buttons {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .membros li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ra {
+        margin-top: 4px;
     }
 }
